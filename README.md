@@ -1,3 +1,3 @@
 # pump
 
-Simple news app.
+> Simple news app.
