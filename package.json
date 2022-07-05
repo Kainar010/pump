@@ -1,0 +1,35 @@
+{
+	"name": "pump",
+	"version": "1.0.0",
+	"private": false,
+	"description": "Simple news app.",
+	"author": {
+		"name": "Yernar.T",
+		"email": "toktaryernar@gmail.com",
+		"url": "https://github.com/YernarT"
+	},
+	"bugs": {
+		"url": "https://github.com/Kainar010/pump/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Kainar010/pump"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+	},
+	
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
