@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const IntroduceStyledBox = styled.div`
+export const NewsPageStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
