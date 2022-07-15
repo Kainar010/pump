@@ -1,7 +1,7 @@
-import type { RouteProps } from '#/routes';
+import type { RouteProps } from './index';
 
 import { lazy } from 'react';
-import { sleep } from '@/utils';
+import { sleep, role } from '@/utils';
 
 import { CommonLoading } from '@/loading';
 
@@ -10,19 +10,19 @@ const commonRoutes: RouteProps[] = [
 		path: ['/', '/introduce'],
 		component: lazy(async () => {
 			await sleep(360);
-			return import('@/pages/common/IntroducePage');
+			return import('@/pages/common/NewsPage');
 		}),
 		fallback: <CommonLoading />,
 		auth: false,
-		role: ['guest', 'user', 'admin'],
-		title: 'Introduce | Pump',
+		role: role.all(),
+		title: 'News | Pump',
 	},
 	{
 		path: '/404',
 		component: lazy(() => import('@/pages/common/PageNotFoundPage')),
 		fallback: <CommonLoading />,
 		auth: false,
-		role: ['guest', 'user', 'admin'],
+		role: role.all(),
 		title: '404 | Pump',
 	},
 ];
