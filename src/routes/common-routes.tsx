@@ -7,7 +7,7 @@ import { CommonLoading } from '@/loading';
 
 const commonRoutes: RouteProps[] = [
 	{
-		path: ['/', '/introduce'],
+		path: ['/', '/news'],
 		component: lazy(async () => {
 			await sleep(360);
 			return import('@/pages/common/NewsPage');
