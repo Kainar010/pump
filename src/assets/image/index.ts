@@ -1,1 +1,1 @@
-export { default as favicon } from './favicon.svg';
+export { default as logo } from './logo.png';

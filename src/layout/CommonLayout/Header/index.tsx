@@ -8,7 +8,7 @@ import { memo } from 'react';
 import { Typography, Button } from 'antd';
 import { HeaderWrap } from './style';
 // 媒体资源
-import { favicon } from '@/assets/image';
+import { logo } from '@/assets/image';
 
 export default memo(function Header() {
 	return (
@@ -16,7 +16,7 @@ export default memo(function Header() {
 			<header className="header">
 				{/* 网站 Brand */}
 				<div className="brand">
-					<img src={favicon} alt="Zhandaua Logo" className="logo" />
+					<img src={logo} alt="Zhandaua Logo" className="logo" />
 					<Typography.Title className="title">Pump</Typography.Title>
 				</div>
 
