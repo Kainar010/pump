@@ -5,6 +5,7 @@ import { container } from '@/assets/style';
 export const ContentStyledBox = styled.main`
 	${container};
 	padding-top: 16px !important;
+	padding-bottom: 16px !important;
 	height: calc(100% - 72px);
 	${({ theme }) => theme.palette.backgroundColor};
 
@@ -16,5 +17,6 @@ export const ContentStyledBox = styled.main`
 
 	& > * {
 		height: 100%;
+		overflow: hidden auto;
 	}
 `;
