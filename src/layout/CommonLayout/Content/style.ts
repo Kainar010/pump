@@ -13,4 +13,8 @@ export const ContentStyledBox = styled.main`
 	z-index: 800;
 
 	overflow: hidden auto;
+
+	& > * {
+		height: 100%;
+	}
 `;
