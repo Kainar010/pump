@@ -6,7 +6,7 @@ export const HeaderWrap = styled.div`
 	${container};
 	height: 72px;
 	${({ theme }) => theme.palette.backgroundColor};
-	box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
 
 	overflow: hidden;
 
