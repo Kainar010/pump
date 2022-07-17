@@ -1,7 +1,6 @@
-import type { userStateProperties } from '@/store';
-
 import axios from 'axios';
 import { localStorage } from '@/utils';
+import { defaultUserState } from '@/store';
 
 export const apiServerInstance = axios.create({
 	baseURL: 'http://localhost:8000',
@@ -11,7 +10,7 @@ export const apiServerInstance = axios.create({
 // Request interceptor
 apiServerInstance.interceptors.request.use(config => {
 	// Every time the jwt is updated in the page, the localstorage needs to be updated together
-	const { jwt } = localStorage.get('user') as userStateProperties;
+	const { jwt } = localStorage.get('user', defaultUserState);
 
 	if (jwt && config.headers) {
 		config.headers['Authorization'] = `Bearer ${jwt}`;
@@ -44,7 +43,7 @@ apiServerInstance.interceptors.response.use(
 			});
 		}
 
-		console.error('Error in request: ', error);
+		console.error('Error in response: ', error);
 		return Promise.reject(error);
 	},
 );
